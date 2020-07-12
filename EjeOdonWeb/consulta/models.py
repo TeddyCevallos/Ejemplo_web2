@@ -7,12 +7,18 @@ class Cliente(Model):
     apellido = models.CharField(max_length = 15)
     ciudad = models.CharField(max_length = 15)
 
-    def Mostra(self):
-        mostrar = {'0','1'}
-        return self.nombre
+    def Mostrar(self):
+        cadena = "{0} {1}"
+        return cadena.format(self.nombre, self.apellido)
+
+    def __str__(self):
+        return self.Mostrar()
 
 class Producto(Model):
-    Nombre = models.CharField(max_length = 10)
-    descripcion = models.TextField(max_length = 10)
-    imagen = models.ImageField()
+    Nombre = models.CharField(max_length = 50)
+    descripcion = models.TextField(max_length = 999)
+    imagen = models.ImageField(upload_to = "project")
     precio = models.DecimalField(max_digits = 5, decimal_places = 2)
+
+    def __str__(self):
+        return self.Nombre
