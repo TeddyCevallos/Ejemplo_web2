@@ -1,0 +1,14 @@
+        models
+nombre = models.CharField(max_length = 15)
+apellido = models.CharField(max_length = 15)
+ciudad = models.CharField(max_length = 15)
+id = models.CharField(max_length = 10)
+id= models.PrimaryKey(settings.AUTH_USER_MODEL)
+fecha_registro = models.DateTimeField()
+
+def NombreCompleto(self):
+    cadena = "{0},{1},{2}"
+    return cadena.format(self.nombre, self.apellido, self.id)
+
+def __str__(self):
+    return self.NombreCompleto()

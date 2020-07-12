@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block meta %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block header %}
+    <header class="header">
+        <nav class="navegacion">
+            <a href="http://fci.utm.edu.ec:88/evirtual/" target="_blank"> <img src="{% static 'img/logofci.jpg' %}" alt=""></a>
+            <ul class="nav-ul">
+                <li class="nav-li"><a class="nav-a" href="/"> Inicio</a></li>
+                <li class="nav-li"><a class="nav-a" href="#"> Servicios</a></li>
+                <li class="nav-li"><a class="nav-a" href="portfolio/"> Portafolio</a></li>
+                <li class="nav-li"><a class="nav-a" href="#"> Acerca de Nosotros</a></li>
+                <li class="nav-li"><a class="nav-a" href="contact/"> Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% endblock %}
+    {% block slider %}
+    <section class="slider">
+        <ul class="slider-ul">
+            <li class="slider-li"> <img class="slider-img" src="{% static 'img/base.jpg' %}" alt=""> </li>
+            <li class="slider-li"> <img class="slider-img" src="{% static 'img/views.jpg' %}" alt=""> </li>
+            <li class="slider-li"> <img class="slider-img" src="{% static 'img/contact.jpg' %}" alt=""> </li>
+        </ul>
+    </section>
+    {% endblock %}
+    {% block contact %}
+    <section class="contactos">
+        <h2>Contactos</h2>
+        <div class="cont">
+            <img src="{% static 'img/Teddy.jpg' %}" alt="">
+            <p>Estudiante <a href="https://www.facebook.com/AlexCevallosBravo/">Teddy Cevallos</a> </p>
+        </div>
+        <div class="cont">
+            <img src="{% static 'img/FotoPepe.jpg' %}" alt="">
+            <p>Docente <a href="#">José Párraga</a> </p>
+        </div>
+    </section>
+    {% endblock %}
+    {% block portfolio %}
+    <section class="portafolio">
+        <h2>Portafolio</h2>
+        <p>Aqui tendremos todos los proyectos que hagamos en el transcurso de la materia</p>
+        <div class="port">
+            <img src="{% static 'img/img1.png' %}" alt="">
+            <p>descripcion de imagen</p>
+        </div>
+        <div class="port">
+            <img src="{% static 'img/img2.png' %}" alt="">
+            <p>descripcion de imagen</p>
+        </div>
+    </section>
+    {% endblock %}
+    <footer>
+        <div class="foot-1">
+            <ul class="foot-ul">
+                <li class="foot-li"><a class="foot-a" href="/">Inicio</a></li>
+                <li class="foot-li"><a class="foot-a" href="#">Servicios</a></li>
+                <li class="foot-li"><a class="foot-a" href="portfolio/">Portafolio</a></li>
+                <li class="foot-li"><a class="foot-a" href="#">Acerca de nosotros</a></li>
+                <li class="foot-li"><a class="foot-a" href="contact/">Contactos</a></li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <ul class="foot2-ul">
+                <li class="foot2-li"><a class="foot2-a" href="#"> <i class="fab fa-facebook"></i> </a> </li>
+                <li class="foot2-li"><a class="foot2-a" href="#"> <i class="fab fa-instagram"></i></a></li>
+                <li class="foot2-li"><a class="foot2-a" href="#"> <i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
