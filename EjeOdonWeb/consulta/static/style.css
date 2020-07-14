@@ -178,20 +178,64 @@ a {
     height: auto;
 }
 
+
+
+/* -------------------servicee-------------------- */
+.service{
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+.service h1{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.service-product{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid rgb(199,137,16);
+    box-shadow:0 0 5px 5px rgba(199,137,16,.84);
+    position: relative;
+    display: flex;
+}
+
+.service-product img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    align-items: center;
+}
+
+.product-div{
+    width: 50%;
+    height: auto;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+}
+
+
 /*-----------------foter----------------------*/
 footer {
+    clear: both;
     width: 75%;
-    height: 250px;
+    height: 150px;
+    margin: auto;
     margin-bottom: 10px;
-    margin: 0 auto;
     background: #666;
 }
 
 .foot-1, .foot-2 {
-    padding: 20px;
+    padding: 10px 20px;
     width: 200px;
-    height: 200px;
-    margin: 22px;
+    height: auto;
+    margin: auto;
 }
 
 .foot-1 {
@@ -201,7 +245,7 @@ footer {
 }
 
 .foot-ul {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .foot-a {

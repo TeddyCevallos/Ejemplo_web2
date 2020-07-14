@@ -14,11 +14,11 @@ class Cliente(Model):
     def __str__(self):
         return self.Mostrar()
 
-class Producto(Model):
+class Producto(models.Model):
     Nombre = models.CharField(max_length = 50)
     descripcion = models.TextField(max_length = 999)
-    imagen = models.ImageField(upload_to = "project")
+    imagen = models.ImageField(upload_to = "product")
     precio = models.DecimalField(max_digits = 5, decimal_places = 2)
-
+    link = models.URLField(blank = True,null = True, max_length = 255)
     def __str__(self):
         return self.Nombre

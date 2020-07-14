@@ -23,7 +23,7 @@
             <a href="http://fci.utm.edu.ec:88/evirtual/" target="_blank"> <img src="{% static 'img/logofci.jpg' %}" alt=""></a>
             <ul class="nav-ul">
                 <li class="nav-li"><a class="nav-a" href="/"> Inicio</a></li>
-                <li class="nav-li"><a class="nav-a" href="#"> Servicios</a></li>
+                <li class="nav-li"><a class="nav-a" href="{% url 'service' %}"> Servicios</a></li>
                 <li class="nav-li"><a class="nav-a" href="{% url 'portfolio' %}"> Portafolio</a></li>
                 <li class="nav-li"><a class="nav-a" href="#"> Acerca de Nosotros</a></li>
                 <li class="nav-li"><a class="nav-a" href="{% url 'contact' %}"> Contactos</a></li>
@@ -65,6 +65,24 @@
             <img src="{% static 'img/img2.png' %}" alt="">
             <p>descripcion de imagen</p>
         </div>
+    </section>
+    {% endblock %}
+    {% block service %}
+    <section class="service">
+        <h1>Lista De Productos</h1>
+        {% for product in product %}
+        <div class="service-product">
+            <img src="{{ product.imagen.url }}" alt="">
+            <div class="product-div">
+                <h3> {{ product.Nombre }}</h3>
+                <p>Description: <br>{{ product.descripcion }}</p><br>
+                <p>$: {{ product.precio }}</p>
+                {% if product.link %}
+                <a href="{{ product.link }}">More Information</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
     </section>
     {% endblock %}
     <footer>

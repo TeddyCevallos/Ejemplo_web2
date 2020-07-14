@@ -23,6 +23,7 @@ urlpatterns = [
     path('consulta/', include('consulta.urls')),
     path('portfolio/',views.portfolio ),
     path('contact/', views.contact),
+    path('service/', views.service),
 ]
 
 if settings.DEBUG:
